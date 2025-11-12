@@ -1,0 +1,22 @@
+var palavra: texto = "banana";
+var chute: texto;
+var tentativas: inteiro = 0;
+var limite: inteiro = 6;
+
+escreva("Bem-vindo!\\n");
+
+repita {
+  escreva("Seu chute: ");
+  leia(chute);
+  se (chute == palavra) {
+    escreva("Você acertou!\\n");
+    pare;
+  } senao {
+    tentativas = tentativas + 1;
+    escreva("Errou. Tentativas: ", tentativas, "/", limite, "\\n");
+  }
+} ate (tentativas >= limite);
+
+se (tentativas >= limite) {
+  escreva("Fim de jogo. A palavra era ", palavra, "\\n");
+}
