@@ -1,4 +1,4 @@
-var palavra: texto = "banana";
+var palavra: texto = "grupo";
 var chute: texto;
 var tentativas: inteiro = 0;
 var limite: inteiro = 6;
