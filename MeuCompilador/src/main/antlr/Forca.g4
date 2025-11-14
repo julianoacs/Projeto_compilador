@@ -2,8 +2,8 @@ grammar Forca;
 
 // Regras do parser
 programa
-  : (declaracao | comando)* EOF
   ;
+  : (declaracao | comando)* Fim
 
 declaracao
   : VAR ID ':' tipo ( '=' expressao )? ';'
@@ -55,7 +55,7 @@ atribuicao
   : ID '=' expressao
   ;
 
-// ===== Expressions with precedence =====
+// Procedencia
 expressao
   : exprOu
   ;
@@ -122,8 +122,6 @@ ID      : [a-zA-Z_] [a-zA-Z_0-9]* ;
 REAL    : [0-9]+ '.' [0-9]+ ;
 INT     : [0-9]+ ;
 TEXTO : '"' ( ~["\\] | '\\' . )* '"' ;
-
-// Whitespace & comments are skipped
 ESPACO : [ \t\r\n]+ -> skip ;
 COMLIN : '//' ~[\r\n]* -> skip ;
 COMBLO : '/*' .*? '*/' -> skip ;

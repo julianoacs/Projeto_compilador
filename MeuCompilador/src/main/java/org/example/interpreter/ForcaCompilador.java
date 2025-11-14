@@ -5,11 +5,7 @@ import org.example.generated.ForcaParser;
 
 import java.util.*;
 
-/**
- * Interpretador/Visitor para a gramática ForcaLang.
- * Coloque este arquivo em src/main/java/org/example/ForcaInterpreter.java
- */
-public class ForcaInterpreter extends ForcaBaseVisitor<Object> {
+public class ForcaCompilador extends ForcaBaseVisitor<Object> {
 
     private final Map<String, Object> memory = new HashMap<>();      // armazena valores
     private final Map<String, String> types = new HashMap<>();       // armazena tipo: "inteiro","real","texto"
