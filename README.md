@@ -358,7 +358,7 @@ Este exemplo mostra leitura em loop até linha vazia (`""`), contagem e saída.
 
 ---
 
-## Boas práticas de escrita de código Forca
+## Boas práticas de escrita de código
 
 * Sempre declare variáveis antes de usar.
 * Use nomes de variáveis descritivos (p.ex. `contador`, `somaTotal`).
